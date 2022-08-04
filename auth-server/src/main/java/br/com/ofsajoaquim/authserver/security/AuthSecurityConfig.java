@@ -129,7 +129,7 @@ public class AuthSecurityConfig {
 				.authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
 				.redirectUri("http://localhost:3000/authorized")
 				.redirectUri("https://oidcdebugger.com/debug")
-				.redirectUri("https://oauth.pstm.io/v1/callback")
+				.redirectUri("https://oauth.pstmn.io/v1/callback")
 				.scope("myuser:read")
 				.scope("myuser:write")
 				.scope("posts:write")
