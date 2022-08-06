@@ -46,7 +46,7 @@ public class UserSecurityConfig {
     
     	converter.setJwtGrantedAuthoritiesConverter(
     			jwt -> {
-    				List<String> userAuthorities = jwt.getClaimAsStringList("authorities");
+    				List<String> userAuthorities = jwt.getClaimAsStringList("authorites");
     			
     				if(userAuthorities == null)
     					return Collections.emptyList();
