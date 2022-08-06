@@ -3,6 +3,7 @@ package br.com.ofsajoaquim.authuser.security;
 import static org.springframework.security.config.Customizer.withDefaults;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -49,7 +50,7 @@ public class UserSecurityConfig {
     				List<String> userAuthorities = jwt.getClaimAsStringList("authorites");
     			
     				if(userAuthorities == null)
-    					return Collections.emptyList();
+    					userAuthorities = Collections.emptyList();
     			
     				JwtGrantedAuthoritiesConverter scopesConverter = new JwtGrantedAuthoritiesConverter();
     				Collection<GrantedAuthority> scopeAutorities=  scopesConverter.convert(jwt);
